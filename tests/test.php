@@ -4,4 +4,6 @@ require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using Compos
 
 use WordpressSlugs\GenerateSlug; 
 
-echo GenerateSlug::returnSlug('hello') . "\n";
+echo GenerateSlug::returnSlug('hello alla glada','','save') . "\n";
+echo GenerateSlug::returnSlug('nu gör vi det här','','query') . "\n";
+echo GenerateSlug::returnSlug('Marîn Döbèl','','query') . "\n";
