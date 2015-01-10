@@ -1,0 +1,23 @@
+{
+    "name": "hippies/wordpress-slugs",
+    "description": "Create wordpress like title slugs without wordpress as a dependency",
+    "require-dev": {
+        "phpunit/phpunit": "dev-master"
+    },
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Christian Bolstad",
+            "email": "christian@carnaby.se"
+        }
+    ],
+    "minimum-stability": "dev",
+ "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "WordpressSlugs": "src/"
+        }
+    }
+}
