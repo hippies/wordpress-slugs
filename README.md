@@ -20,8 +20,8 @@ require 'vendor/autoload.php';
 
 use WordpressSlugs\GenerateSlug; 
 
-echo GenerateSlug::returnSlug('Hello everyone','','save') . "\n";
-echo GenerateSlug::returnSlug('Marîn Döbèl','','query') . "\n";
+echo GenerateSlug::returnSlug('Hello everyone') . "\n";
+echo GenerateSlug::returnSlug('Marîn Döbèl') . "\n";
 
 
 ```
