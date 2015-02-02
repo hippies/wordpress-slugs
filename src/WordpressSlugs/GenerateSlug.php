@@ -14,7 +14,7 @@ class GenerateSlug {
 	 * @param int     $length      Max length of the string
 	 * @return string String with Unicode encoded for URI.
 	 */
-	function utf8_uri_encode( $utf8_string, $length = 0 ) {
+	public static function utf8_uri_encode( $utf8_string, $length = 0 ) {
 		$unicode = '';
 		$values = array();
 		$num_octets = 1;
@@ -67,7 +67,7 @@ class GenerateSlug {
 	 * @param string  $str The string to be checked
 	 * @return bool True if $str fits a UTF-8 model, false otherwise.
 	 */
-	function seems_utf8( $str ) {
+	public static function seems_utf8( $str ) {
 		$length = strlen( $str );
 		for ( $i=0; $i < $length; $i++ ) {
 			$c = ord( $str[$i] );
@@ -99,7 +99,7 @@ class GenerateSlug {
 	 * @param string  $context   Optional. The operation for which the string is sanitized.
 	 * @return string The sanitized title.
 	 */
-	function sanitize_title_with_dashes( $title, $raw_title = '', $context = 'display' ) {
+	public static function sanitize_title_with_dashes( $title, $raw_title = '', $context = 'display' ) {
 		$title = strip_tags( $title );
 		// Preserve escaped octets.
 		$title = preg_replace( '|%([a-fA-F0-9][a-fA-F0-9])|', '---$1---', $title );
@@ -166,7 +166,7 @@ class GenerateSlug {
 	 * @param string  $string Text that might have accent characters
 	 * @return string Filtered string with replaced "nice" characters.
 	 */
-	function remove_accents( $string ) {
+	public static function remove_accents( $string ) {
 		if ( !preg_match( '/[\x80-\xff]/', $string ) )
 			return $string;
 
@@ -392,7 +392,7 @@ class GenerateSlug {
 		return $string;
 	}
 
-	function get_locale() {
+	public static function get_locale() {
 		return 'sv_SE';
 	}
 
